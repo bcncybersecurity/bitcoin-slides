@@ -54,6 +54,37 @@
 						To answer this we must talk about bitcoin and cryptography in general.
 					</p>
 				</section>
+
+				<section>
+					<h2>A few words on asymmetric cryptography</h2>
+					<p>
+						Public key, or asymmetric, cryptography is a cryptographic system that uses two different keys to encrypt and decrypt messages.
+					</p>
+					<p>
+						Public key cryptography is based on the mathematical notion of a one-way function. A one-way function is a function that is easy to compute on every input, but hard to invert given the image of a random input.
+					</p>
+				</section>
+
+				<section>
+					<p>The existence of one-way function is linked to the P vs NP problem.</p>
+					<p>The P vs NP problem asks whether every problem whose solution can be quickly verified by a computer can also be quickly solved by a computer.</p>
+					<p>Typical examples of P vs NP are Public key encryption and digiltal signatures.</p>
+				</section>
+
+				<section>
+					<h2>Public key encryption</h2>
+					<p>
+						A message is encrypted with a recipient's public key. The message cannot be decrypted by anyone who does not possess the matching private key, who is thus presumed to be the owner of that key and the person associated with the public key.
+					</p>
+				</section>
+
+				<section>
+					<h2>Digiltal signatures</h2>
+					<p>
+						A message is signed with the sender's private key and can be verified by anyone who has access to the sender's public key. This verification proves that the sender had access to the private key, and therefore is likely to be the person associated with the public key. This also ensures that the message has not been tampered with, as any manipulation of the message will result in changes to the encoded message digest, which otherwise remains unchanged between the sender and receiver.
+					</p>
+				</section>
+
 				<section>
 					<section>
 						<h2>What is bitcoin</h2>
@@ -81,6 +112,7 @@
 					<section>
 						<h2>The bitcoin system overview</h2>
 						<img src="images/bitcoin-overview.png">
+						<p style="font-size: 0.6em;">* From: Mastering Bitcoin - O'Reilly</p>
 					</section>
 					<section>
 						<p>
@@ -132,53 +164,39 @@
 						<p>Addresses in bitcoin transactions are public. Although the idea is that addresses should be used max twice.</p>
 						<p>The blockchain can be analysed to link transactions to real people: i.e. identities.</p>
 					</section>
+					<section>
+						<p>System for anonymous payments on bitcoin have been developen but aren't always accepted.</p>
+					</section>
+					<section>
+						<p>Transactions contain information that can be used to profile or trace real life identities.</p>
+						<p>A bitcoin address per se doesn't say anything about you, but your transaction history does.</p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<h2>What's in a transaction</h2>
+					<iframe style="width: 1000px; height: 600px;" src="https://blockchain.info/tx/9565eab7798c61bc56f2eb5fe9db5fe0e1cf34bc174b58149854d95e2ed50757"></iframe>
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
+					<h2>Transactions can have different structures</h2>
+					<iframe style="width: 1000px; height: 600px;" src="https://blockchain.info/address/1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v"></iframe>
+				</section>
+
+				<section>
+					<h2>Transactions can be tagged</h2>
+					<iframe style="width: 1000px; height: 600px;" src="https://blockchain.info/related_tags?active=1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v"></iframe>
+				</section>
+
+				<section>
+					<h2>Thanks.</h2>
 					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+						<q cite="https://en.wikipedia.org/wiki/Cypherpunks_%28book%29">
+						&ldquo;One must acknowledge with cryptography no amount of violence will ever solve a math problem.&rdquo;</q>
+						<br />
+						- Jacob Appelbaum,
+						<br />
+						Cypherpunks: Freedom and the Future of the Internet
 					</p>
 				</section>
 
